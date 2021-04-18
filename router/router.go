@@ -8,6 +8,7 @@ import (
 
 func Router() *gin.Engine {
 	r := gin.Default()
+	r.Use(IpLimit())
 	v1 := r.Group("v1/captcha")
 
 	v1.POST("/get", Get)

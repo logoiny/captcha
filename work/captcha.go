@@ -46,10 +46,9 @@
 package work
 
 import (
-	"encoding/base64"
-	"fmt"
 	"captcha/modle"
 	"captcha/utils"
+	"encoding/base64"
 	"time"
 )
 
@@ -67,9 +66,6 @@ var (
 func CaptchaVerify(id, captcha string) *modle.CaptchaVerifyRsp {
 
 	ds := rdsStore.Get(id, true)
-	fmt.Println("ds : ", ds)
-	ds1 := rdsStore.Get(id, true)
-	fmt.Println("ds1 : ", ds1)
 	captchaRsp := &modle.CaptchaVerifyRsp{}
 	captchaRsp.Passed = ds == captcha
 	return captchaRsp
