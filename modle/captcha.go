@@ -24,7 +24,7 @@ type CaptchaReloadRsp struct {
 
 type CaptchaVerify struct {
 	CaptchaId string `json:"captcha_id"`
-	Captcha string `json:"work"`
+	Captcha string `json:"captcha"`
 }
 
 type CaptchaVerifyRsp struct {
